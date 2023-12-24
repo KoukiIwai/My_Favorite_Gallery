@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+body {
+  display: grid;
+  background: #ffd877;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+p {
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer {
+  text-align: center;
+}
+
+.gallery {
+  max-width: 600px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+ul li img {
+  transition: opacity .5s;
+}
+
+ul li img:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.gallery div {
+  position: relative;
+}
+
+#caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
+.img-item {
+  opacity: 0;
+  filter: blur(10px);
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer {
+  text-align: center;
+}
+
+.gallery {
+  max-width: 600px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+ul li img {
+  transition: opacity .1s;
+}
+
+ul li img:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.gallery div {
+  position: relative;
+}
+
+#caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 170, 0, .7);
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
+.img-item {
+  opacity: 0;
+  filter: blur(10px);
+  width: 100%;
+}
+
+body {
+  margin: 10;
+}
+
+header {
+  top: center;
+  z-index: 10;
+}
+
+footer {
+  bottom: 0;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 25%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+#loading {
+  transition: all 3s;
+  /*ローディングにかかる時間*/
+  background-color: #ffb43f;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading-text {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.spin {
+  width: 64px;
+  height: auto;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*
+https://tobiasahlin.com/spinkit/
+*/
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.cube1,
+.cube2{
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5)
+  }
+
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg)
+  }
+
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg)
+  }
+}
+
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
